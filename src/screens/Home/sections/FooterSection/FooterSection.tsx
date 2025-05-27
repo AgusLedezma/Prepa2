@@ -1,81 +1,68 @@
-import {
-  FacebookIcon,
-  InstagramIcon,
-  MailIcon,
-  MessageCircleIcon,
-} from "lucide-react";
 import React from "react";
+import { Link } from "react-router-dom";
+import { FacebookIcon, InstagramIcon } from "lucide-react";
 
 export const FooterSection = (): JSX.Element => {
-  // Navigation links data
   const navLinks = [
-    "Quiénes somos",
-    "Servicios",
-    "Precios",
-    "Blog",
-    "Contacto",
+    { label: "Quiénes somos", to: "/quienes-somos" },
+    { label: "Servicios", to: "/servicios" },
+    { label: "Precios", to: "/precios" },
+    { label: "Blog", to: "/blog" },
+    { label: "Contacto", to: "/contacto" },
   ];
 
-  // Social media data
-  const socialMedia = [
-    {
-      icon: <InstagramIcon className="w-[30px] h-[30px]" />,
-      label: "Instagram",
-    },
-    { icon: <FacebookIcon className="w-[30px] h-[30px]" />, label: "Facebook" },
-    {
-      icon: <MessageCircleIcon className="w-[30px] h-[30px]" />,
-      label: "WhatsApp",
-    },
-    { icon: <MailIcon className="w-[30px] h-[30px]" />, label: "Email" },
+  const socialLinks = [
+    { icon: <InstagramIcon />, url: "https://www.instagram.com/", label: "Instagram" },
+    { icon: <FacebookIcon />, url: "https://www.facebook.com/", label: "Facebook" },
   ];
 
   return (
-    <footer className="w-full h-[187px] bg-lila flex items-center justify-between px-[113px]">
-      {/* Logo section */}
-      <div>
-        <img
-          className="w-[276px] h-[116px] object-cover"
-          alt="University logo"
-          src="https://c.animaapp.com/mb5qod9tByWyXj/img/image-2.png"
-        />
-      </div>
-
-      {/* Brand section */}
-      <div className="flex items-center">
-        <img
-          className="w-[29px] h-[29px]"
-          alt="Flash circle"
-          src="https://c.animaapp.com/mb5qod9tByWyXj/img/flash-circle.svg"
-        />
-        <div className="ml-[37px] font-['Manrope',Helvetica] font-bold text-white text-2xl">
-          Conecta PRO
-        </div>
-      </div>
-
-      {/* Navigation links */}
-      <nav className="flex flex-col items-start gap-3 px-4 py-[3px]">
-        {navLinks.map((link, index) => (
-          <a
-            key={index}
-            href="#"
-            className="font-caption-inter-light font-[number:var(--caption-inter-light-font-weight)] text-white text-[length:var(--caption-inter-light-font-size)] text-center tracking-[var(--caption-inter-light-letter-spacing)] leading-[var(--caption-inter-light-line-height)] [font-style:var(--caption-inter-light-font-style)]"
-          >
-            {link}
-          </a>
-        ))}
-      </nav>
-
-      {/* Social media section */}
-      <div className="flex gap-[50px]">
-        {socialMedia.map((item, index) => (
-          <div key={index} className="flex flex-col items-center">
-            {item.icon}
-            <span className="mt-1 font-caption-inter-light font-[number:var(--caption-inter-light-font-weight)] text-white text-[length:var(--caption-inter-light-font-size)] text-center tracking-[var(--caption-inter-light-letter-spacing)] leading-[var(--caption-inter-light-line-height)] [font-style:var(--caption-inter-light-font-style)]">
-              {item.label}
-            </span>
+    <footer className="w-full bg-lila text-white py-10">
+      <div className="container mx-auto flex justify-between items-start px-6">
+        <div className="flex items-center gap-4">
+          <img
+            src="https://c.animaapp.com/mb5quo92dUPiZg/img/universidad-catolica-boliviana.png"
+            alt="Universidad Católica Boliviana"
+            className="w-24 h-24 object-contain"
+          />
+          <div className="flex flex-col">
+            <span className="text-xs uppercase">Universidad</span>
+            <span className="text-lg font-bold text-blue-300">CATÓLICA</span>
+            <span className="text-xs">BOLIVIANA</span>
+            <span className="text-xs">COCHABAMBA</span>
           </div>
-        ))}
+        </div>
+
+        <div className="flex flex-col">
+          <Link to="/" className="flex items-center gap-2 mb-4">
+            <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+              <div className="w-4 h-4 bg-purpura rounded-full"></div>
+            </div>
+            <span className="font-bold">Conecta PRO</span>
+          </Link>
+          <nav className="flex flex-col gap-2">
+            {navLinks.map((link, index) => (
+              <Link key={index} to={link.to} className="hover:text-gray-300">
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+
+        <div className="flex gap-6">
+          {socialLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-lila hover:bg-gray-200 transition-colors"
+            >
+              {link.icon}
+              <span className="sr-only">{link.label}</span>
+            </a>
+          ))}
+        </div>
       </div>
     </footer>
   );

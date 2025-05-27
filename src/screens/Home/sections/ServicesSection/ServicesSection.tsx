@@ -2,6 +2,7 @@ import { EthernetPortIcon, RepeatIcon } from "lucide-react";
 import React from "react";
 import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
+import { Link } from "react-router-dom";
 
 // Service plan data for mapping
 const servicePlans = [
@@ -55,10 +56,11 @@ export const ServicesSection = (): JSX.Element => {
             </Card>
           ))}
         </div>
-
-        <Button className="bg-rosa text-white w-40 h-10 rounded-md font-body-inter-semibold font-[number:var(--body-inter-semibold-font-weight)] text-[length:var(--body-inter-semibold-font-size)] tracking-[var(--body-inter-semibold-letter-spacing)] leading-[var(--body-inter-semibold-line-height)] [font-style:var(--body-inter-semibold-font-style)]">
-          Explorar
+        <Link to="/planes">
+          <Button className="bg-rosa text-white w-40 h-10 rounded-md font-body-inter-semibold font-[number:var(--body-inter-semibold-font-weight)] text-[length:var(--body-inter-semibold-font-size)] tracking-[var(--body-inter-semibold-letter-spacing)] leading-[var(--body-inter-semibold-line-height)] [font-style:var(--body-inter-semibold-font-style)]">
+            Explorar
         </Button>
+        </Link>
       </div>
     </section>
   );

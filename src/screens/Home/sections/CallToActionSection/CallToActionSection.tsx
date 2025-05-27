@@ -1,16 +1,23 @@
 import React from "react";
 import { Button } from "../../../../components/ui/button";
+import videoSrc from "../../../../assets/robotCelular.mp4"
+
 
 export const CallToActionSection = (): JSX.Element => {
   return (
     <section className="w-full bg-black py-16 relative">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
         <div className="relative">
-          <img
-            className="h-[387px] w-auto object-contain"
-            alt="Design illustration"
-            src="https://c.animaapp.com/mb5qod9tByWyXj/img/dise-o-sin-t-tulo--5--1.png"
-          />
+          <video
+            className="w-full h-auto max-h-[387px] object-cover rounded-lg"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src={videoSrc} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         <div className="flex flex-col items-start md:max-w-[513px] space-y-12">

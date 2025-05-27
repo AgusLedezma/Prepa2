@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../../../../components/ui/button";
+import videoSrc from "../../../../assets/robotCiudad.mp4";
 
 export const HeroSection = (): JSX.Element => {
   return (
@@ -31,11 +32,16 @@ export const HeroSection = (): JSX.Element => {
 
       {/* Right image */}
       <div className="relative flex-1">
-        <img
-          className="absolute w-full h-full object-cover"
-          alt="AI robot illustration"
-          src="https://c.animaapp.com/mb5qod9tByWyXj/img/dise-o-sin-t-tulo-1.svg"
-        />
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src={videoSrc} type="video/mp4" />
+          Tu navegador no soporta el video.
+        </video>
       </div>
     </section>
   );

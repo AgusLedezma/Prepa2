@@ -1,4 +1,6 @@
 import React from "react";
+import videoSrc from "../../../../assets/personitas.mp4";
+
 
 export const AboutUsSection = (): JSX.Element => {
   const contentData = {
@@ -6,14 +8,12 @@ export const AboutUsSection = (): JSX.Element => {
     sections: [
       {
         title: "Misión",
-        description:
-          "From automating processes to managing intelligent AI agents, Make's visual platform gives you the power to speed innovation.",
+        description:"En ConectaPro S.R.L servimos a las PyMEs  cochabambinas y emprendimientos que enfrentan ineficiencias operativas, altos costos y falta de escalabilidad, ofreciendo diagnósticos ágiles y soluciones de automatización digital basadas en plataformas low-code. A través de un enfoque consultivo integral que combina un “Diagnóstico Digital Express”, implementación de “Automatización Administrativa” y despliegue de “Atención al Cliente Automatizada” acompañamos a nuestros clientes desde la identificación de sus necesidades hasta el soporte post-implementación, garantizando un rápido retorno de inversión y fomentando la adopción tecnológica sostenible.",
         align: "left",
       },
       {
         title: "Visión",
-        description:
-          "From automating processes to managing intelligent AI agents, Make's visual platform gives you the power to speed innovation.",
+        description:"Queremos convertirnos en el socio estratégico de referencia para la transformación digital de las PyMEs en Bolivia, liderando la industria de automatización con soluciones innovadoras, asequibles y adaptadas a cada negocio. Aspiramos a cerrar la brecha tecnológica del 80 % de empresas sin herramientas digitales integradas, elevando el nivel de adopción tecnológica regional y consolidando un ecosistema de organizaciones más eficientes, competitivas y escalables.",
         align: "right",
       },
     ],
@@ -46,11 +46,16 @@ export const AboutUsSection = (): JSX.Element => {
           </div>
 
           <div className="w-full md:w-1/2 flex justify-end mt-6 md:mt-0">
-            <img
-              className="w-full max-w-[402px] h-auto"
-              alt="Digital innovation illustration"
-              src={contentData.image}
-            />
+            <video
+              className="w-[600px] h-[350px] object-cover"
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source src={videoSrc} type="video/mp4" />
+              Tu navegador no soporta el video.
+            </video>
           </div>
         </div>
       </div>

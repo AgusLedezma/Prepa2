@@ -19,9 +19,9 @@ export const Home = (): JSX.Element => {
       </main>
       <FooterSection />
       <div className="fixed bottom-4 right-4">
-        <Link to="/planes">
+        <Link to="/precios">
           <button className="bg-rosa hover:bg-rosa/90 text-white w-40 h-10 rounded-md font-body-inter-semibold text-[length:var(--body-inter-semibold-font-size)] tracking-[var(--body-inter-semibold-letter-spacing)] leading-[var(--body-inter-semibold-line-height)] [font-style:var(--body-inter-semibold-font-style)]">
-            Planes
+            Precios
           </button>
         </Link>
       </div>

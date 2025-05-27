@@ -12,7 +12,6 @@ import {
 export const NavigationMenuSection = (): JSX.Element => {
   const menuItems = [
     { label: "Quiénes somos", to: "/quienes-somos" },
-    { label: "Planes", to: "/planes" },
     { label: "Precios", to: "/precios" },
     { label: "Contacto", to: "/contacto" },
   ];

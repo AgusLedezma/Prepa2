@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FacebookIcon, InstagramIcon } from "lucide-react";
+import logoUCB from "../../../../assets/ucb.png"
+
 
 export const FooterSection = (): JSX.Element => {
   const navLinks = [
     { label: "Quiénes somos", to: "/quienes-somos" },
     { label: "Servicios", to: "/servicios" },
     { label: "Precios", to: "/precios" },
-    { label: "Blog", to: "/blog" },
     { label: "Contacto", to: "/contacto" },
   ];
 
@@ -21,7 +22,7 @@ export const FooterSection = (): JSX.Element => {
       <div className="container mx-auto flex justify-between items-start px-6">
         <div className="flex items-center gap-4">
           <img
-            src="https://c.animaapp.com/mb5quo92dUPiZg/img/universidad-catolica-boliviana.png"
+            src={logoUCB}
             alt="Universidad Católica Boliviana"
             className="w-24 h-24 object-contain"
           />

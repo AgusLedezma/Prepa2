@@ -1,6 +1,8 @@
 import React from "react";
 import { NavigationMenuSection } from "../Home/sections/NavigationMenuSection/NavigationMenuSection";
 import { FooterSection } from "../Home/sections/FooterSection/FooterSection";
+import { Link } from "react-router-dom";
+
 
 export const Servicios = (): JSX.Element => {
   const servicios = [
@@ -73,9 +75,15 @@ export const Servicios = (): JSX.Element => {
             <p className="text-xl mb-8">
               Contáctanos hoy para descubrir cómo nuestros servicios pueden impulsar tu empresa hacia el futuro.
             </p>
-            <button className="bg-rosa text-white font-bold py-2 px-6 rounded-full hover:bg-rosa/90 transition duration-300">
-              Solicitar una Consulta
-            </button>
+            <a
+              href="https://wa.me/65392746"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="bg-rosa text-white font-bold py-2 px-6 rounded-full hover:bg-rosa/90 transition duration-300">
+                Solicitar una Consulta
+              </button>
+            </a>
           </div>
         </section>
       </main>

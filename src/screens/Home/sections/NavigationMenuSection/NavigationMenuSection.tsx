@@ -39,12 +39,15 @@ export const NavigationMenuSection = (): JSX.Element => {
           ))}
         </NavigationMenuList>
       </NavigationMenu>
-
-      <Link to="/planes">
+      <a
+        href="https://wa.me/65392746"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Button className="bg-rosa text-blanco h-10 w-40 rounded-md font-body-inter-semibold text-[length:var(--body-inter-semibold-font-size)] tracking-[var(--body-inter-semibold-letter-spacing)] leading-[var(--body-inter-semibold-line-height)]">
           Empezar ahora
         </Button>
-      </Link>
+      </a> 
     </header>
   );
 };

@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const servicePlans = [
   {
     id: 1,
-    title: "Plan Estándar de Automatización",
+    title: "Precio Estándar de Automatización",
     description:
       "Automatizá tareas repetitivas y gestioná chats con IA de forma eficiente. Ideal para empresas en crecimiento que quieren digitalizar sus procesos sin complicaciones.",
     icon: <RepeatIcon className="w-8 h-8" />,
@@ -16,7 +16,7 @@ const servicePlans = [
   },
   {
     id: 2,
-    title: "Plan Corporativo de Automatización",
+    title: "Precio Corporativo de Automatización",
     description:
       "Automatización avanzada y escalable, diseñada para grandes equipos. Integraciones personalizadas, respaldo seguro y comunicación masiva vía WhatsApp API.",
     icon: <EthernetPortIcon className="w-8 h-8" />,

@@ -65,7 +65,7 @@ export const Precios = (): JSX.Element => {
                 Automatización simple y potente para empresas en crecimiento.
               </p>
               <div className="text-center mb-4">
-                <span className="text-rosa text-6xl font-bold">5476.00</span>
+                <span className="text-rosa text-6xl font-bold">10953.00</span>
                 <p className="text-purpura">Bs</p>
               </div>
               <div className="w-full space-y-3 mb-6">

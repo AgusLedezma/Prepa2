@@ -29,7 +29,7 @@ export const ServicesSection = (): JSX.Element => {
     <section className="w-full py-10 bg-blanco">
       <div className="container mx-auto flex flex-col items-center">
         <h2 className="text-center font-h2-manrope-semibold font-[number:var(--h2-manrope-semibold-font-weight)] text-lila text-[length:var(--h2-manrope-semibold-font-size)] tracking-[var(--h2-manrope-semibold-letter-spacing)] leading-[var(--h2-manrope-semibold-line-height)] [font-style:var(--h2-manrope-semibold-font-style)] mb-12">
-          Nuestros planes
+          Nuestros precios
         </h2>
 
         <div className="flex flex-wrap justify-center gap-8 mb-12">

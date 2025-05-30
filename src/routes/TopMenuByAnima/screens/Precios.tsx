@@ -76,9 +76,15 @@ export const Precios = (): JSX.Element => {
                   </div>
                 ))}
               </div>
+            <a
+              href="https://wa.me/65392746"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button className="w-full bg-lila hover:bg-lila/90 text-white">
                 Elegir este precio
               </Button>
+            </a> 
             </CardContent>
           </Card>
 
@@ -117,9 +123,15 @@ export const Precios = (): JSX.Element => {
                   </div>
                 ))}
               </div>
+            <a
+              href="https://wa.me/65392746"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button className="w-full bg-lila hover:bg-lila/90 text-white">
                 Contáctanos
               </Button>
+            </a>     
             </CardContent>
           </Card>
         </section>

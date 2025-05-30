@@ -6,8 +6,8 @@ import { Button } from "../../components/ui/button";
 export const Precios = (): JSX.Element => {
   const planes = [
     {
-      nombre: "Plan Básico",
-      precio: "500 Bs",
+      nombre: "Precio Básico Estandar",
+      precio: "10953 Bs",
       caracteristicas: [
         "1,000 operaciones Make por mes",
         "200 solicitudes de IA",
